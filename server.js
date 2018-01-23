@@ -1,6 +1,6 @@
 var express = require('express'),
-  app = express(),
-  var cors = require('cors')
+  app = express();
+  const cors = require('cors'),
   port = process.env.PORT || 4000,
   mongoose = require('mongoose'),
   Task = require('./api/models/model'), //created model loading here
