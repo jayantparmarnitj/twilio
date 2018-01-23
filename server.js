@@ -18,9 +18,9 @@ promise.then(function(db) {
 }, function(err){
     console.log("Error in connecting database " + err);
 });
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 require('./api/routes/routes')(app); //importing route
 
