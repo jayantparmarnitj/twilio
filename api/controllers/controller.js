@@ -20,7 +20,7 @@ try{
     },
     (err, message) => {
       if(err)        
-        return res.success(200).json({success:0,msg:err.message});
+        return res.status(200).json({success:0,msg:err.message});
       else
         {
           console.log(message.sid);
