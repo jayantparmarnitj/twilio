@@ -3,6 +3,9 @@ exports.list_card_data = function(req, res) {
   res.json({"hello":"jayant"});
 };
 exports.create_charge = function(req, res) {
+
+try{
+
   console.log(req.body);
  var code = Math.floor((Math.random()*1000000)+1);
   const accountSid = 'AC5cce3ad6245f9d26361fc1430275274a';
@@ -24,5 +27,12 @@ exports.create_charge = function(req, res) {
     }
   );
 res.send("Otp Sent Successfully");
+
+
+
+}
+catch(e){
+  return res.status(500).json({success:0,msg:e.message});
+}
 
 }
