@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-require('./api/routes/routes')(app); //importing route
+require('./api/routes/routes')(app);
 
 
 app.listen(port);
