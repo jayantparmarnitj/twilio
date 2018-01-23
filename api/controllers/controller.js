@@ -16,7 +16,7 @@ try{
     {
       to: `${mobile}`,
       from: '+13015473283',
-      body: `Greetings! Your OTP is ${code}`,
+      body: `Jayant Your OTP is ${code}`,
     },
     (err, message) => {
       if(err)        
