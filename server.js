@@ -5,8 +5,6 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Task = require('./api/models/model'), //created model loading here
   bodyParser = require('body-parser');
-
-
 mongoose.Promise = global.Promise;
 
 var promise = mongoose.connect('mongodb://localhost:27017/Tododb', {
