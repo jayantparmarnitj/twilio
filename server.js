@@ -1,6 +1,6 @@
 var express = require('express'),
   app = express(),
-  
+  var cors = require('cors')
   port = process.env.PORT || 4000,
   mongoose = require('mongoose'),
   Task = require('./api/models/model'), //created model loading here
@@ -18,7 +18,7 @@ promise.then(function(db) {
 }, function(err){
     console.log("Error in connecting database " + err);
 });
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
