@@ -22,6 +22,8 @@ try{
     (err, message) => {
      // console.log(message);
       console.log(message.sid);
+      if(err)
+          res.send(err);
     }
   );
 res.send("Otp Sent Successfully");
