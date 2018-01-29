@@ -5,17 +5,19 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Task = require('./api/models/model'), //created model loading here
   bodyParser = require('body-parser');
-mongoose.Promise = global.Promise;
 
+
+mongoose.Promise = global.Promise;
 var promise = mongoose.connect('mongodb://localhost:27017/Tododb', {
   useMongoClient: true,
 });
-
 promise.then(function(db) {
     console.log("Connected to database!!!");
 }, function(err){
     console.log("Error in connecting database " + err);
 });
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
