@@ -7,15 +7,15 @@ var express = require('express'),
   bodyParser = require('body-parser');
 
 
-mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://localhost:27017/Tododb', {
-  useMongoClient: true,
-});
-promise.then(function(db) {
-    console.log("Connected to database!!!");
-}, function(err){
-    console.log("Error in connecting database " + err);
-});
+// mongoose.Promise = global.Promise;
+// var promise = mongoose.connect('mongodb://localhost:27017/Tododb', {
+//   useMongoClient: true,
+// });
+// promise.then(function(db) {
+//     console.log("Connected to database!!!");
+// }, function(err){
+//     console.log("Error in connecting database " + err);
+// });
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
